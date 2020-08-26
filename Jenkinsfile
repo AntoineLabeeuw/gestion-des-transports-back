@@ -4,11 +4,6 @@ pipeline {
 		maven "maven-container"
     }
     stages {
-        stage('checkout') {
-            steps{
-                git 'https://github.com/AntoineLabeeuw/gestion-des-transports-back.git'
-            }
-        }
         stage('build') {
             steps {
                 sh 'mvn clean package'
